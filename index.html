@@ -234,17 +234,40 @@
 
 
             <div class="choices-container">
+<div class="envelope-scene">
 
+    <!-- الخلفية الداخلية للظرف -->
+    <img
+        src="images/envelope-back.png"
+        alt=""
+        class="envelope-back"
+    >
 
-                <!-- CHOICE 1 — FLOWERS -->
+    <!-- الصور الثلاث الخارجة من الظرف -->
+    <div class="envelope-photos">
 
-                <button id="flowerChoice" class="choice-card">
+        <button class="envelope-photo envelope-photo-left" onclick="showPage('flower-page')">
+            <img src="images/flower.png" alt="Flower">
+        </button>
 
-                    <!-- IMAGE 8 — Flower bouquet -->
-                    <div class="choice-image">
-                        <img src="images/flower.png"
-                             alt="Flower bouquet">
-                    </div>
+        <button class="envelope-photo envelope-photo-center" onclick="showPage('photo-page')">
+            <img src="images/photo-strip-1.png" alt="Photos">
+        </button>
+
+        <button class="envelope-photo envelope-photo-right" onclick="showPage('song-page')">
+            <img src="images/song-image.png" alt="Favorite Song">
+        </button>
+
+    </div>
+
+    <!-- واجهة الظرف الأمامية -->
+    <img
+        src="images/envelope-front.png"
+        alt=""
+        class="envelope-front"
+    >
+
+</div>
 
                     <span>Click this</span>
                     <small>A little bouquet for you</small>
