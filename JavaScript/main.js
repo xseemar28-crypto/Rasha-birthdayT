@@ -6,8 +6,8 @@ const pages = {
     password: document.getElementById("passwordPage"),
     envelope: document.getElementById("envelopePage"),
     openedEnvelope: document.getElementById("openedEnvelopePage"),
+    letter: document.getElementById("letterPage"),
     flower: document.getElementById("flowerPage"),
-    photo: document.getElementById("photoPage"),
     song: document.getElementById("songPage"),
     final: document.getElementById("finalPage")
 };
@@ -20,17 +20,26 @@ const pages = {
 function showPage(pageName) {
 
     Object.values(pages).forEach(page => {
-        page.classList.remove("active-page");
+
+        if (page) {
+            page.classList.remove("active-page");
+        }
+
     });
 
+
     if (pages[pageName]) {
+
         pages[pageName].classList.add("active-page");
+
     }
+
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
+
 }
 
 
@@ -43,25 +52,37 @@ const correctPassword = "143";
 let enteredPassword = "";
 
 
+/* =========================================================
+   CHECK PASSWORD
+========================================================= */
+
 function checkPassword() {
 
     if (enteredPassword === correctPassword) {
 
         enteredPassword = "";
 
+
         if (typeof updatePasswordDisplay === "function") {
+
             updatePasswordDisplay();
+
         }
 
+
         showPage("envelope");
+
 
     } else {
 
         if (typeof showErrorPopup === "function") {
+
             showErrorPopup();
+
         }
 
     }
+
 }
 
 
@@ -72,22 +93,32 @@ function checkPassword() {
 function addPasswordNumber(number) {
 
     if (enteredPassword.length >= 3) {
+
         return;
+
     }
+
 
     enteredPassword += number;
 
+
     if (typeof updatePasswordDisplay === "function") {
+
         updatePasswordDisplay();
+
     }
+
 
     if (enteredPassword.length === 3) {
 
         setTimeout(() => {
+
             checkPassword();
+
         }, 180);
 
     }
+
 }
 
 
@@ -99,9 +130,13 @@ function clearPassword() {
 
     enteredPassword = "";
 
+
     if (typeof updatePasswordDisplay === "function") {
+
         updatePasswordDisplay();
+
     }
+
 }
 
 
@@ -113,27 +148,35 @@ function openEnvelope() {
 
     showPage("openedEnvelope");
 
+
     if (typeof playEnvelopeAnimation === "function") {
+
         playEnvelopeAnimation();
+
     }
+
 }
 
 
 /* =========================================================
-   FLOWER
+   FLOWER BOUQUET + PHOTO STRIPS
 ========================================================= */
 
 function openFlowerPage() {
+
     showPage("flower");
+
 }
 
 
 /* =========================================================
-   PHOTO STRIP
+   LETTER
 ========================================================= */
 
-function openPhotoPage() {
-    showPage("photo");
+function openLetterPage() {
+
+    showPage("letter");
+
 }
 
 
@@ -142,7 +185,9 @@ function openPhotoPage() {
 ========================================================= */
 
 function openSongPage() {
+
     showPage("song");
+
 }
 
 
@@ -151,7 +196,9 @@ function openSongPage() {
 ========================================================= */
 
 function openFinalPage() {
+
     showPage("final");
+
 }
 
 
@@ -161,15 +208,6 @@ function openFinalPage() {
 
 function goBack(pageName) {
 
-    /*
-        password
-        envelope
-        openedEnvelope
-        flower
-        photo
-        song
-        final
-    */
-
     showPage(pageName);
+
 }
