@@ -111,7 +111,7 @@ if (envelopeButton) {
 
 
 /* =========================================================
-   CHOICE 1 — FLOWER
+   CHOICE 1 — FLOWER BOUQUET + PHOTO STRIPS
 ========================================================= */
 
 const flowerChoice =
@@ -121,7 +121,7 @@ if (flowerChoice) {
 
     flowerChoice.addEventListener("click", () => {
 
-        openFlowerPage();
+        showPage("flowerPage");
 
     });
 
@@ -129,17 +129,17 @@ if (flowerChoice) {
 
 
 /* =========================================================
-   CHOICE 2 — PHOTO STRIP
+   CHOICE 2 — LETTER
 ========================================================= */
 
-const photoChoice =
-    document.getElementById("photoChoice");
+const letterChoice =
+    document.getElementById("letterChoice");
 
-if (photoChoice) {
+if (letterChoice) {
 
-    photoChoice.addEventListener("click", () => {
+    letterChoice.addEventListener("click", () => {
 
-        openPhotoPage();
+        showPage("letterPage");
 
     });
 
@@ -147,7 +147,7 @@ if (photoChoice) {
 
 
 /* =========================================================
-   CHOICE 3 — SONG
+   CHOICE 3 — FAVORITE SONG
 ========================================================= */
 
 const songChoice =
@@ -178,7 +178,15 @@ backButtons.forEach(button => {
         const destination =
             button.dataset.back;
 
-        goBack(destination);
+        if (button.dataset.page) {
+
+            showPage(button.dataset.page);
+
+        } else {
+
+            goBack(destination);
+
+        }
 
     });
 
