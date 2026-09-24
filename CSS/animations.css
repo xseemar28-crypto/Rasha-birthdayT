@@ -200,3 +200,87 @@
         transition-duration: 0.01ms !important;
     }
 }
+/* =========================================================
+   ENVELOPE PHOTOS POP OUT
+========================================================= */
+
+.envelope-photo-left,
+.envelope-photo-center,
+.envelope-photo-right {
+    animation: envelopePhotoPop 0.8s ease-out both;
+}
+
+.envelope-photo-left {
+    animation-delay: 0.15s;
+}
+
+.envelope-photo-center {
+    animation-delay: 0.05s;
+}
+
+.envelope-photo-right {
+    animation-delay: 0.2s;
+}
+
+@keyframes envelopePhotoPop {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.envelope-photo-left {
+    animation-name: envelopePhotoLeft;
+}
+
+.envelope-photo-center {
+    animation-name: envelopePhotoCenter;
+}
+
+.envelope-photo-right {
+    animation-name: envelopePhotoRight;
+}
+
+@keyframes envelopePhotoLeft {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px) rotate(0deg) scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(-10deg) scale(1);
+    }
+}
+
+@keyframes envelopePhotoCenter {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(35px) scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+
+@keyframes envelopePhotoRight {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px) rotate(0deg) scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(10deg) scale(1);
+    }
+}
