@@ -2,7 +2,6 @@
    BIRTHDAY PAGE DECORATIONS
    ========================================= */
 
-/* الحاوية العامة للزخارف */
 .decorations {
     position: fixed;
     inset: 0;
@@ -11,33 +10,29 @@
     overflow: hidden;
 }
 
-/* الشكل الرئيسي */
+/* =========================================
+   الزخارف الرئيسية الكبيرة
+   ========================================= */
+
 .decorations::before {
     content: "𐙚";
     position: absolute;
-
-    top: 6%;
-    left: 7%;
-
-    font-size: 42px;
+    top: 4%;
+    left: 4%;
+    font-size: 46px;
     color: var(--dark-pink);
-
-    transform: rotate(-15deg);
+    transform: rotate(-18deg);
     opacity: 0.8;
 }
 
-/* شكل ثاني كبير */
 .decorations::after {
     content: "★";
     position: absolute;
-
-    bottom: 7%;
-    right: 7%;
-
-    font-size: 38px;
+    bottom: 5%;
+    right: 4%;
+    font-size: 42px;
     color: var(--dark-pink);
-
-    transform: rotate(12deg);
+    transform: rotate(16deg);
     opacity: 0.75;
 }
 
@@ -51,130 +46,128 @@
     color: var(--dark-pink);
     pointer-events: none;
     user-select: none;
+    line-height: 1;
 }
 
 
-/* الركن العلوي الأيسر */
+/* أعلى يسار - قريب من الزاوية */
 .decoration-1 {
-    top: 4%;
-    left: 5%;
-    font-size: 20px;
-    transform: rotate(-18deg);
+    top: 11%;
+    left: 9%;
+    font-size: 19px;
+    transform: rotate(-22deg);
 }
 
 
-/* أعلى الصفحة - قريب من المنتصف */
+/* أعلى - مائل للجهة اليسرى */
 .decoration-2 {
-    top: 3%;
-    left: 38%;
-    font-size: 15px;
-    transform: rotate(10deg);
-}
-
-
-/* الركن العلوي الأيمن */
-.decoration-3 {
-    top: 8%;
-    right: 5%;
-    font-size: 25px;
-    transform: rotate(20deg);
-}
-
-
-/* يمين الصفحة */
-.decoration-4 {
-    top: 30%;
-    right: 3%;
-    font-size: 17px;
-    transform: rotate(-12deg);
-}
-
-
-/* يسار الصفحة */
-.decoration-5 {
-    top: 38%;
-    left: 3%;
-    font-size: 28px;
-    transform: rotate(15deg);
-}
-
-
-/* منتصف اليمين */
-.decoration-6 {
-    top: 55%;
-    right: 7%;
+    top: 5%;
+    left: 27%;
     font-size: 13px;
+    transform: rotate(18deg);
+}
+
+
+/* أعلى يمين */
+.decoration-3 {
+    top: 13%;
+    right: 7%;
+    font-size: 27px;
     transform: rotate(25deg);
 }
 
 
-/* منتصف اليسار */
-.decoration-7 {
-    top: 62%;
-    left: 6%;
-    font-size: 18px;
-    transform: rotate(-25deg);
+/* يمين - مرتفعة */
+.decoration-4 {
+    top: 24%;
+    right: 3%;
+    font-size: 15px;
+    transform: rotate(-17deg);
 }
 
 
-/* الركن السفلي الأيسر */
-.decoration-8 {
-    bottom: 6%;
-    left: 5%;
-    font-size: 30px;
-    transform: rotate(12deg);
+/* يسار - مرتفعة */
+.decoration-5 {
+    top: 28%;
+    left: 4%;
+    font-size: 25px;
+    transform: rotate(14deg);
 }
 
 
-/* أسفل الصفحة */
-.decoration-9 {
-    bottom: 4%;
-    left: 42%;
-    font-size: 14px;
-    transform: rotate(-8deg);
-}
-
-
-/* الركن السفلي الأيمن */
-.decoration-10 {
-    bottom: 5%;
-    right: 5%;
-    font-size: 19px;
-    transform: rotate(18deg);
-}
-
-
-/* زخرفة عشوائية إضافية */
-.decoration-11 {
-    top: 18%;
-    left: 14%;
+/* يمين - منتصف الصفحة */
+.decoration-6 {
+    top: 46%;
+    right: 8%;
     font-size: 12px;
-    transform: rotate(-20deg);
-}
-
-
-/* زخرفة عشوائية إضافية */
-.decoration-12 {
-    top: 22%;
-    right: 15%;
-    font-size: 16px;
     transform: rotate(30deg);
 }
 
 
-/* زخرفة عشوائية إضافية */
-.decoration-13 {
-    bottom: 25%;
-    left: 15%;
-    font-size: 14px;
-    transform: rotate(18deg);
+/* يسار - منتصف الصفحة */
+.decoration-7 {
+    top: 53%;
+    left: 6%;
+    font-size: 18px;
+    transform: rotate(-28deg);
 }
 
 
-/* زخرفة عشوائية إضافية */
-.decoration-14 {
-    bottom: 20%;
-    right: 14%;
-    font-size: 11px;
+/* أسفل يسار */
+.decoration-8 {
+    bottom: 12%;
+    left: 4%;
+    font-size: 31px;
+    transform: rotate(10deg);
+}
+
+
+/* أسفل - مائل */
+.decoration-9 {
+    bottom: 4%;
+    left: 31%;
+    font-size: 14px;
     transform: rotate(-15deg);
+}
+
+
+/* أسفل يمين */
+.decoration-10 {
+    bottom: 13%;
+    right: 9%;
+    font-size: 20px;
+    transform: rotate(22deg);
+}
+
+
+/* =========================================
+   زخارف عشوائية أكثر
+   ========================================= */
+
+.decoration-11 {
+    top: 19%;
+    left: 17%;
+    font-size: 11px;
+    transform: rotate(-25deg);
+}
+
+.decoration-12 {
+    top: 34%;
+    right: 17%;
+    font-size: 17px;
+    transform: rotate(32deg);
+}
+
+.decoration-13 {
+    bottom: 27%;
+    left: 14%;
+    font-size: 13px;
+    transform: rotate(20deg);
+}
+
+.decoration-14 {
+    bottom: 22%;
+    right: 16%;
+    font-size: 11px;
+    transform: rotate(-18deg);
 }
