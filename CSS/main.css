@@ -889,3 +889,17 @@ h1 {
     top: auto;
     bottom: auto;
 }
+.letter-image {
+    width: min(500px, 90vw);
+    margin: 25px auto;
+}
+
+.letter-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 12px;
+}
