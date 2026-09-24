@@ -903,3 +903,51 @@ h1 {
     background: #fff;
     border-radius: 12px;
 }
+.flower-memory-layout {
+    width: min(650px, 94vw);
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.bouquet-image {
+    width: 230px;
+    flex-shrink: 0;
+}
+
+.bouquet-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.flower-memory-layout .photo-strip {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.flower-memory-layout .strip-left {
+    transform: rotate(-4deg);
+}
+
+.flower-memory-layout .strip-right {
+    transform: rotate(4deg);
+}
+
+.flower-memory-layout .strip-photo {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 5px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.flower-memory-layout .strip-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
