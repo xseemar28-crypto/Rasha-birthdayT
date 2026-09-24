@@ -1,1 +1,151 @@
+/* =========================================================
+   GENERAL DECORATIONS
+========================================================= */
 
+.decor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   CUTE BOWS
+========================================================= */
+
+.decor-bow {
+    width: 35px;
+    height: 25px;
+}
+
+.decor-bow::before,
+.decor-bow::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--pink-main);
+    border: 1px solid var(--pink-dark);
+}
+
+.decor-bow::before {
+    left: 0;
+    transform: rotate(25deg);
+    border-radius: 70% 30% 70% 30%;
+}
+
+.decor-bow::after {
+    right: 0;
+    transform: rotate(-25deg);
+    border-radius: 30% 70% 30% 70%;
+}
+
+.bow-one {
+    top: 8%;
+    left: 7%;
+    transform: rotate(-10deg);
+}
+
+.bow-two {
+    bottom: 8%;
+    right: 7%;
+    transform: rotate(10deg);
+}
+
+
+/* =========================================================
+   SPARKLES
+========================================================= */
+
+.sparkle {
+    position: fixed;
+    color: var(--pink-dark);
+    font-family: serif;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.sparkle-one {
+    top: 15%;
+    right: 10%;
+    font-size: 20px;
+}
+
+.sparkle-two {
+    top: 32%;
+    left: 6%;
+    font-size: 15px;
+}
+
+.sparkle-three {
+    bottom: 22%;
+    right: 8%;
+    font-size: 17px;
+}
+
+.sparkle-four {
+    bottom: 13%;
+    left: 12%;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SOFT WING DECORATION
+========================================================= */
+
+.wing-decoration {
+    position: fixed;
+    width: 60px;
+    height: 90px;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.wing-decoration::before,
+.wing-decoration::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 75px;
+    background: var(--pink-soft);
+    border-radius: 80% 20% 80% 20%;
+}
+
+.wing-decoration::before {
+    left: 0;
+    transform: rotate(25deg);
+}
+
+.wing-decoration::after {
+    right: 0;
+    transform: rotate(-25deg);
+}
+
+.wing-left {
+    left: -10px;
+    top: 45%;
+}
+
+.wing-right {
+    right: -10px;
+    top: 45%;
+}
+
+
+/* =========================================================
+   SUBTLE PAPER TEXTURE
+========================================================= */
+
+.error-popup,
+.choice-card,
+.cute-button {
+    background-image:
+        radial-gradient(
+            rgba(255,255,255,0.16) 0.7px,
+            transparent 0.7px
+        );
+    background-size: 8px 8px;
+}
