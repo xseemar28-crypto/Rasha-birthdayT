@@ -686,3 +686,195 @@ h1 {
         right: 1%;
     }
 }
+/* =========================================================
+   OPEN ENVELOPE — FINAL LAYERED DESIGN
+========================================================= */
+
+.envelope-scene {
+    position: relative;
+    width: min(420px, 92vw);
+    height: 360px;
+    margin: 25px auto 0;
+    overflow: visible;
+}
+
+/* -----------------------------------------
+   BACK OF ENVELOPE
+----------------------------------------- */
+
+.envelope-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* -----------------------------------------
+   THREE PHOTOS
+----------------------------------------- */
+
+.envelope-photos {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+
+/* Remove all old button/card styling */
+
+.envelope-photo {
+    position: absolute !important;
+
+    display: block !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    outline: none !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+
+    cursor: pointer;
+
+    overflow: visible;
+
+    z-index: 2;
+}
+
+
+/* Images inside the three cards */
+
+.envelope-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+}
+
+
+/* -----------------------------------------
+   LEFT PHOTO
+----------------------------------------- */
+
+.envelope-photo-left {
+    width: 105px !important;
+    height: 145px !important;
+
+    left: 7%;
+    bottom: 105px;
+
+    transform: rotate(-10deg);
+
+    z-index: 2;
+}
+
+
+/* -----------------------------------------
+   CENTER PHOTO
+----------------------------------------- */
+
+.envelope-photo-center {
+    width: 115px !important;
+    height: 160px !important;
+
+    left: 50%;
+    bottom: 135px;
+
+    transform: translateX(-50%);
+
+    z-index: 3;
+}
+
+
+/* -----------------------------------------
+   RIGHT PHOTO
+----------------------------------------- */
+
+.envelope-photo-right {
+    width: 105px !important;
+    height: 145px !important;
+
+    right: 7%;
+    bottom: 105px;
+
+    transform: rotate(10deg);
+
+    z-index: 2;
+}
+
+
+/* -----------------------------------------
+   FRONT OF ENVELOPE
+----------------------------------------- */
+
+.envelope-front {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+
+/* -----------------------------------------
+   HOVER
+----------------------------------------- */
+
+.envelope-photo-left:hover {
+    transform: rotate(-10deg) translateY(-6px);
+}
+
+.envelope-photo-center:hover {
+    transform: translateX(-50%) translateY(-6px);
+}
+
+.envelope-photo-right:hover {
+    transform: rotate(10deg) translateY(-6px);
+}
+
+
+/* -----------------------------------------
+   IMPORTANT:
+   Hide any OLD opened-envelope elements
+----------------------------------------- */
+
+.opened-main-image {
+    display: none !important;
+}
+
+.choices-container {
+    display: contents !important;
+}
+
+.choice-card {
+    display: none !important;
+}
+
+.choice-image {
+    display: none !important;
+}
