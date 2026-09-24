@@ -1,55 +1,180 @@
 /* =========================================
-   PAGE DECORATIONS
-   Soft stars, bows and tiny details
+   BIRTHDAY PAGE DECORATIONS
    ========================================= */
 
-.decorations::before,
-.decorations::after {
+/* الحاوية العامة للزخارف */
+.decorations {
     position: fixed;
-    z-index: 0;
+    inset: 0;
     pointer-events: none;
-    color: var(--dark-pink);
-    font-family: Georgia, serif;
-    opacity: 0.65;
+    z-index: 10;
+    overflow: hidden;
 }
 
-/* Top-left decorations */
+/* الشكل الرئيسي */
 .decorations::before {
-    content: "𐙚 ̊  ★  ˚";
-    top: 8%;
-    left: 5%;
-    font-size: 22px;
-    letter-spacing: 8px;
-}
-
-/* Bottom-right decorations */
-.decorations::after {
-    content: "★  𐙚  ˚  ✦";
-    bottom: 8%;
-    right: 5%;
-    font-size: 20px;
-    letter-spacing: 7px;
-}
-
-/* Extra decorative elements */
-.page::before {
-    content: "✦";
-    position: fixed;
-    top: 18%;
-    right: 8%;
-    color: var(--dark-pink);
-    font-size: 14px;
-    opacity: 0.55;
-    pointer-events: none;
-}
-
-.page::after {
     content: "𐙚";
-    position: fixed;
-    bottom: 18%;
-    left: 8%;
+    position: absolute;
+
+    top: 6%;
+    left: 7%;
+
+    font-size: 42px;
     color: var(--dark-pink);
-    font-size: 17px;
-    opacity: 0.55;
+
+    transform: rotate(-15deg);
+    opacity: 0.8;
+}
+
+/* شكل ثاني كبير */
+.decorations::after {
+    content: "★";
+    position: absolute;
+
+    bottom: 7%;
+    right: 7%;
+
+    font-size: 38px;
+    color: var(--dark-pink);
+
+    transform: rotate(12deg);
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   الزخارف الصغيرة
+   ========================================= */
+
+.decoration {
+    position: absolute;
+    color: var(--dark-pink);
     pointer-events: none;
+    user-select: none;
+}
+
+
+/* الركن العلوي الأيسر */
+.decoration-1 {
+    top: 4%;
+    left: 5%;
+    font-size: 20px;
+    transform: rotate(-18deg);
+}
+
+
+/* أعلى الصفحة - قريب من المنتصف */
+.decoration-2 {
+    top: 3%;
+    left: 38%;
+    font-size: 15px;
+    transform: rotate(10deg);
+}
+
+
+/* الركن العلوي الأيمن */
+.decoration-3 {
+    top: 8%;
+    right: 5%;
+    font-size: 25px;
+    transform: rotate(20deg);
+}
+
+
+/* يمين الصفحة */
+.decoration-4 {
+    top: 30%;
+    right: 3%;
+    font-size: 17px;
+    transform: rotate(-12deg);
+}
+
+
+/* يسار الصفحة */
+.decoration-5 {
+    top: 38%;
+    left: 3%;
+    font-size: 28px;
+    transform: rotate(15deg);
+}
+
+
+/* منتصف اليمين */
+.decoration-6 {
+    top: 55%;
+    right: 7%;
+    font-size: 13px;
+    transform: rotate(25deg);
+}
+
+
+/* منتصف اليسار */
+.decoration-7 {
+    top: 62%;
+    left: 6%;
+    font-size: 18px;
+    transform: rotate(-25deg);
+}
+
+
+/* الركن السفلي الأيسر */
+.decoration-8 {
+    bottom: 6%;
+    left: 5%;
+    font-size: 30px;
+    transform: rotate(12deg);
+}
+
+
+/* أسفل الصفحة */
+.decoration-9 {
+    bottom: 4%;
+    left: 42%;
+    font-size: 14px;
+    transform: rotate(-8deg);
+}
+
+
+/* الركن السفلي الأيمن */
+.decoration-10 {
+    bottom: 5%;
+    right: 5%;
+    font-size: 19px;
+    transform: rotate(18deg);
+}
+
+
+/* زخرفة عشوائية إضافية */
+.decoration-11 {
+    top: 18%;
+    left: 14%;
+    font-size: 12px;
+    transform: rotate(-20deg);
+}
+
+
+/* زخرفة عشوائية إضافية */
+.decoration-12 {
+    top: 22%;
+    right: 15%;
+    font-size: 16px;
+    transform: rotate(30deg);
+}
+
+
+/* زخرفة عشوائية إضافية */
+.decoration-13 {
+    bottom: 25%;
+    left: 15%;
+    font-size: 14px;
+    transform: rotate(18deg);
+}
+
+
+/* زخرفة عشوائية إضافية */
+.decoration-14 {
+    bottom: 20%;
+    right: 14%;
+    font-size: 11px;
+    transform: rotate(-15deg);
 }
