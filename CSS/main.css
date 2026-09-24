@@ -878,3 +878,14 @@ h1 {
 .choice-image {
     display: none !important;
 }
+/* Go Back button under opened envelope */
+
+#openedEnvelopePage .back-button {
+    display: block;
+    margin: 25px auto 0;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+}
