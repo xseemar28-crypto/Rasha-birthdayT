@@ -13,6 +13,9 @@ html {
 }
 
 body {
+   .arabic-text {
+    font-family: "Amiri", serif;
+   }
     min-height: 100vh;
     background: var(--pink-lightest);
     color: var(--text-main);
