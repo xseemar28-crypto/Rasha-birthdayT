@@ -1,1 +1,36 @@
+:root {
 
+    /* ==============================
+       MAIN THEME COLORS
+    ============================== */
+
+    --pink-lightest: #FFF7FA;
+    --pink-light: #FCE8F0;
+    --pink-soft: #F8D8E4;
+    --pink-main: #F3C1D4;
+
+    /* Slightly darker pink */
+    --pink-dark: #D98DAA;
+    --pink-deep: #C87998;
+
+    /* Neutral colors */
+    --white: #FFFFFF;
+    --cream: #FFF9F1;
+    --beige: #F6E8D7;
+    --off-white: #FFFDFB;
+
+    /* Photo strip */
+    --photo-strip-pink: #F5C2D7;
+
+    /* Text */
+    --text-main: #805C68;
+    --text-soft: #A67887;
+    --text-light: #FFFFFF;
+
+    /* Borders */
+    --border-soft: #F1D5DF;
+
+    /* Shadows */
+    --shadow-soft: rgba(130, 75, 95, 0.12);
+    --shadow-pink: rgba(217, 141, 170, 0.22);
+}
